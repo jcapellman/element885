@@ -1,0 +1,17 @@
+﻿@model List<element885.web.Models.SongListingItem>
+
+<div class="center-block">
+    <img src="images/logo.png" class="img-responsive center-block" alt="Element885" />
+
+    @foreach (var song in Model)
+    {
+        <div class="center-block img-rounded player-container">
+            <audio controls title="@song.Name" class="center-block player-control">
+                <source src="~/music/@song.FileName" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+
+            <p class="text-center h3">@song.Name</p>
+        </div>
+    }
+</div>
